@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Landing Page</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(90deg, #FF4081, #E040FB);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Navigation Styles */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            padding: 14px 20px;
+            display: block;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        /* Hero Section Styles */
+        section.hero {
+            background: linear-gradient(120deg, rgba(255, 64, 129, 0.7), rgba(224, 64, 251, 0.7)),
+                        url('https://via.placeholder.com/1920x600') no-repeat center center;
+            background-size: cover;
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        section.hero:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR42mP8/5+hHgAHggJ/IBOgAAAABJRU5ErkJggg==');
+            opacity: 0.1;
+        }
+
+        section.hero h2 {
+            margin-top: 0;
+            animation: fadeIn 2s;
+        }
+
+        section.hero p {
+            animation: fadeIn 2s 1s;
+        }
+
+        section.hero button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #FFD700;
+            color: black;
+            border: none;
+            cursor: pointer;
+            animation: fadeIn 2s 2s;
+            position: relative;
+            overflow: hidden;
+            transition: color 0.4s;
+        }
+
+        section.hero button span {
+            position: absolute;
+            display: block;
+            width: 300%;
+            height: 300%;
+            top: 50%;
+            left: 50%;
+            pointer-events: none;
+            background: rgba(255, 255, 255, 0.15);
+            transform: translate(-50%, -50%) rotate(45deg);
+            transition: width 0.4s, height 0.4s;
+        }
+
+        section.hero:hover button span {
+            width: 0;
+            height: 0;
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+     <!-- Header Section -->
+     <header style="background: linear-gradient(90deg, #b7d3e5, #E040FB); color: white; text-align: center; padding: 20px;">
+        <h1 style="font-size: 2.5em; margin: 0;">Welcome to Our Advanced Landing Page</h1>
+        <p style="font-size: 1.2em;">Engage with us and explore more!</p>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav style="display: flex; justify-content: center; background-color: #333; position: sticky; top: 0; z-index: 1000;">
+        <a href="#about" style="padding: 14px 20px; display: block; color: white; text-align: center; text-decoration: none; transition: background-color 0.3s;">About</a>
+        <a href="#services" style="padding: 14px 20px; display: block; color: white; text-align: center; text-decoration: none; transition: background-color 0.3s;">Services</a>
+        <a href="#features" style="padding: 14px 20px; display: block; color: white; text-align: center; text-decoration: none; transition: background-color 0.3s;">Features</a>
+        <a href="#pricing" style="padding: 14px 20px; display: block; color: white; text-align: center; text-decoration: none; transition: background-color 0.3s;">Pricing</a>
+        <a href="#testimonials" style="padding: 14px 20px; display: block; color: white; text-align: center; text-decoration: none; transition: background-color 0.3s;">Testimonials</a>
+        <a href="#faq" style="padding: 14px 20px; display: block; color: white; text-align: center; text-decoration: none; transition: background-color 0.3s;">FAQ</a>
+        <a href="#contact" style="padding: 14px 20px; display: block; color: white; text-align: center; text-decoration: none; transition: background-color 0.3s;">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section style="background: linear-gradient(120deg, rgba(236, 150, 194, 0.7), rgba(224, 64, 251, 0.7)), url('https://via.placeholder.com/1920x600') no-repeat center center; background-size: cover; padding: 100px 20px; text-align: center; color: white;">
+        <h2 style="margin-top: 0; animation: fadeIn 2s;">Your One-Stop Solution</h2>
+        <p style="animation: fadeIn 2s 1s;">Discover our range of services designed to help you achieve success.</p>
+        <button style="padding: 10px 20px; font-size: 16px; background-color: #e41bef; color: black; border: none; cursor: pointer; animation: fadeIn 2s 2s; position: relative; overflow: hidden; transition: color 0.4s;">
+            Get Started
+            <span style="position: absolute; display: block; width: 300%; height: 300%; top: 50%; left: 50%; pointer-events: none; background: rgba(255, 255, 255, 0.15); transform: translate(-50%, -50%) rotate(45deg); transition: width 0.4s, height 0.4s;"></span>
+        </button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" style="padding: 50px 20px; text-align: center; background-color: #ab83e3;">
+        <h2 style="font-size: 2em; color: #333;">About Us</h2>
+        <p style="font-size: 1.2em; color: #666;">We are a leading company in providing top-notch solutions to our clients. Our mission is to deliver excellence in every project we undertake.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" style="background-color: #f4f4f4; padding: 50px 20px; text-align: center;">
+        <h2 style="font-size: 2em; color: #333;">Our Services</h2>
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+            <div style="flex: 1; margin: 10px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; transition: transform 0.3s, box-shadow 0.3s; animation: slideIn 1s; background-color: #FFCDD2;">
+                <h3 style="font-size: 1.5em;">Service 1</h3>
+                <p style="font-size: 1.1em;">Detail about service 1</p>
+            </div>
+            <div style="flex: 1; margin: 10px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; transition: transform 0.3s, box-shadow 0.3s; animation: slideIn 1s 0.5s; background-color: #C8E6C9;">
+                <h3 style="font-size: 1.5em;">Service 2</h3>
+                <p style="font-size: 1.1em;">Detail about service 2</p>
+            </div>
+            <div style="flex: 1; margin: 10px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; transition: transform 0.3s, box-shadow 0.3s; animation: slideIn 1s 1s; background-color: #BBDEFB;">
+                <h3 style="font-size: 1.5em;">Service 3</h3>
+                <p style="font-size: 1.1em;">Detail about service 3</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" style="padding: 50px 20px; text-align: center; background-color: #FFAB91;">
+        <h2 style="font-size: 2em; color: #333;">Features</h2>
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+            <div style="flex: 1; margin: 10px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: #FFCCBC;">
+                <h3 style="font-size: 1.5em;">Feature 1</h3>
+                <p style="font-size: 1.1em;">Detail about feature 1</p>
+            </div>
+            <div style="flex: 1; margin: 10px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: #FFCCBC;">
+                <h3 style="font-size: 1.5em;">Feature 2</h3>
+                <p style="font-size: 1.1em;">Detail about feature 2</p>
+            </div>
+            <div style="flex: 1; margin: 10px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: #FFCCBC;">
+                <h3 style="font-size: 1.5em;">Feature 3</h3>
+                <p style="font-size: 1.1em;">Detail about feature 3</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" style="padding: 50px 20px; text-align: center; background-color: #B3E5FC;">
+        <h2 style="font-size: 2em; color: #333;">Pricing</h2>
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+            <div style="flex: 1; margin: 10px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: #E1F5FE;">
+                <h3 style="font-size: 1.5em;">Basic</h3>
+                <p style="font-size: 1.1em;">$10/month</p>
+                <p style="font-size: 1.1em;">Detail about basic plan</p>
+            </div>
+            <div style="flex: 1; margin: 10px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: #E1F5FE;">
+                <h3 style="font-size: 1.5em;">Standard</h3>
+                <p style="font-size: 1.1em;">$20/month</p>
+                <p style="font-size: 1.1em;">Detail about standard plan</p>
+            </div>
+            <div style="flex: 1; margin: 10px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: #E1F5FE;">
+                <h3 style="font-size: 1.5em;">Premium</h3>
+                <p style="font-size: 1.1em;">$30/month</p>
+                <p style="font-size: 1.1em;">Detail about premium plan</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" style="padding: 50px 20px; text-align: center; background-color: #cdd581;">
+        <h2 style="font-size: 2em; color: #333;">Testimonials</h2>
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+            <div style="flex: 1; margin: 10px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: #FFF9C4;">
+                <p style="font-size: 1.1em;">"This company transformed our business! Highly recommended!"</p>
+                <p style="font-size: 1em; font-weight: bold;">- Happy Customer</p>
+            </div>
+            <div style="flex: 1; margin: 10px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: #FFF9C4;">
+                <p style="font-size: 1.1em;">"Exceptional service and support. Truly top-notch."</p>
+                <p style="font-size: 1em; font-weight: bold;">- Satisfied Client</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" style="padding: 50px 20px; text-align: center; background-color: #E1BEE7;">
+        <h2 style="font-size: 2em; color: #333;">Frequently Asked Questions</h2>
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+            <div style="flex: 1; margin: 10px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: #F3E5F5;">
+                <h3 style="font-size: 1.5em;">Question 1</h3>
+                <p style="font-size: 1.1em;">Answer to question 1</p>
+            </div>
+            <div style="flex: 1; margin: 10px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: #F3E5F5;">
+                <h3 style="font-size: 1.5em;">Question 2</h3>
+                <p style="font-size: 1.1em;">Answer to question 2</p>
+            </div>
+            <div style="flex: 1; margin: 10px; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: #F3E5F5;">
+                <h3 style="font-size: 1.5em;">Question 3</h3>
+                <p style="font-size: 1.1em;">Answer to question 3</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" style="padding: 50px 20px; text-align: center; background-color: #FFCCBC;">
+        <h2 style="font-size: 2em; color: #333;">Subscribe to Our Newsletter</h2>
+        <p style="font-size: 1.2em; color: #666;">Stay updated with our latest news and offers.</p>
+        <form>
+            <input type="email" name="email" placeholder="Your Email" style="padding: 10px; margin: 10px; width: 80%; max-width: 400px; border: 1px solid #ccc; border-radius: 5px;"><br>
+            <button type="submit" style="padding: 10px 20px; font-size: 16px; background-color: #FF5722; color: white; border: none; cursor: pointer; border-radius: 5px; position: relative; overflow: hidden; transition: color 0.4s;">
+                Subscribe
+                <span style="position: absolute; display: block; width: 300%; height: 300%; top: 50%; left: 50%; pointer-events: none; background: rgba(255, 255, 255, 0.15); transform: translate(-50%, -50%) rotate(45deg); transition: width 0.4s, height 0.4s;"></span>
+            </button>
+        </form>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="padding: 50px 20px; text-align: center; background-color: #FFCCBC;">
+        <h2 style="font-size: 2em; color: #333;">Contact Us</h2>
+        <p style="font-size: 1.2em; color: #666;">Have questions? Get in touch with us.</p>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" style="padding: 10px; margin: 10px; width: 80%; max-width: 400px; border: 1px solid #ccc; border-radius: 5px;"><br>
+            <input type="email" name="email" placeholder="Your Email" style="padding: 10px; margin: 10px; width: 80%; max-width: 400px; border: 1px solid #ccc; border-radius: 5px;"><br>
+            <textarea name="message" placeholder="Your Message" style="padding: 10px; margin: 10px; width: 80%; max-width: 400px; border: 1px solid #ccc; border-radius: 5px;"></textarea><br>
+            <button type="submit" style="padding: 10px 20px; font-size: 16px; background-color: #FF5722; color: white; border: none; cursor: pointer; border-radius: 5px; position: relative; overflow: hidden; transition: color 0.4s;">
+                Send Message
+                <span style="position: absolute; display: block; width: 300%; height: 300%; top: 50%; left: 50%; pointer-events: none; background: rgba(255, 255, 255, 0.15); transform: translate(-50%, -50%) rotate(45deg); transition: width 0.4s, height 0.4s;"></span>
+            </button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer style="background-color: #333; color: white; text-align: center; padding: 10px;">
+        <p>&copy; 2024 Our Company. All rights reserved.</p>
+    </footer>
+
+    <!-- Inline Styles for Animations and Effects -->
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        div:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        button span {
+            transition: all 0.4s;
+        }
+        button:hover span {
+            width: 0;
+            height: 0;
+        }
+    </style>
+
+</body>
+</html>
